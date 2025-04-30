@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f0f0f0">
+
+    <!-- Video Details section -->
+    <TextView
+        android:id="@+id/videoDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="gravity" />
+
+    <!-- URL TextView below the video details -->
+    <TextView
+        android:id="@+id/videoUrlTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="gravity"
+        android:autoLink="all" /> <!-- Makes the URL clickable -->
+
+    <!-- Below the videoDetailsTextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Accept"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorRed" /> <!-- Green button -->
+
+        <Button
+            android:id="@+id/rejectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reject"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorRed" /> <!-- Red button -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rewardsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rewards"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimaryDark" /> <!-- Blue button -->
+
+    <!-- Hidden View initially -->
+    <LinearLayout
+        android:id="@+id/rewardSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/pointsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter points to add"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50" /> <!-- Green button -->
+    </LinearLayout>
+</LinearLayout>
